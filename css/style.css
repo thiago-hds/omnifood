@@ -1,0 +1,161 @@
+/* 
+---- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights: 
+default: 400
+
+- Line heights: 
+default: 1
+
+---- 02 COLORS
+
+Primary: #e67e22
+Tints:
+#fdf2e9
+Shades:
+#cf711f
+Accents:
+Greys:
+#555
+#333;
+
+---- 05 SHADOWS
+
+---- 06 BORDER-RADIUS
+
+---- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; /* equivalent to 10px */
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	line-height: 1;
+	font-weight: 400;
+	color: #555;
+}
+
+.mg-r-sm {
+	margin-right: 1.6rem !important; /* utility classes are a good use case for !important */
+}
+
+/*  */
+
+.section-hero {
+	background: #fdf2e9;
+	padding: 9.6rem 0;
+}
+
+.hero {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	gap: 9.6rem;
+
+	max-width: 130rem;
+	margin: 0 auto;
+}
+
+.heading-primary {
+	font-size: 5.2rem;
+	font-weight: 700;
+	line-height: 1.05;
+	color: #333;
+	letter-spacing: -0.5px;
+	margin-bottom: 3.2rem;
+}
+
+.hero-description {
+	font-size: 2rem;
+	line-height: 1.6;
+	margin-bottom: 4.8rem;
+}
+
+.btn:link,
+.btn:visited {
+	display: inline-block;
+
+	padding: 1.6rem 3.2rem;
+	font-size: 2rem;
+	font-weight: 600;
+	text-decoration: none;
+
+	border-radius: 9px;
+	transition: background 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+	background: #e67e22;
+	color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+	background: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+	background: #fff;
+	color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+	background: #fdf2e9;
+
+	/* trick to add a inside border */
+	box-shadow: inset 0 0 0 3px #fff;
+}
+
+.hero-img {
+	width: 100%;
+}
+
+.delivered-meals {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	margin-top: 8rem;
+}
+
+.delivered-imgs {
+	display: flex;
+}
+.delivered-imgs img {
+	height: 4.8rem;
+	width: 4.8rem;
+	margin-right: -1.6rem;
+	border: 3px solid #fdf2e9;
+
+	border-radius: 50%;
+}
+
+.delivered-imgs img:last-child {
+	margin: 0;
+}
+
+.delivered-text {
+	font-size: 1.8rem;
+	font-weight: 600;
+}
+
+.delivered-text span {
+	color: #cf711f;
+	font-weight: 700;
+}
