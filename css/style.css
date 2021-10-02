@@ -1,64 +1,58 @@
-/* 
----- 01 TYPOGRAPHY SYSTEM
+/* ---- HEADER ---- */
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
-- Font sizes (px):
-10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
-
-- Font weights: 
-default: 400
-
-- Line heights: 
-default: 1
-
----- 02 COLORS
-
-Primary: #e67e22
-Tints:
-#fdf2e9
-Shades:
-#cf711f
-Accents:
-Greys:
-#555
-#333;
-
----- 05 SHADOWS
-
----- 06 BORDER-RADIUS
-
----- 07 WHITESPACE
-
-- Spacing system (px)
-2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
-
-*/
-
-* {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+	height: 9.6rem; /* a fixed height is better because we want the navigation to be sticky */
+	padding: 0 4.8rem;
+	background: #fdf2e9;
 }
 
-html {
-	font-size: 62.5%; /* equivalent to 10px */
+.logo {
+	height: 2.2rem;
 }
 
-body {
-	font-family: 'Rubik', sans-serif;
-	line-height: 1;
-	font-weight: 400;
-	color: #555;
+/* ---- NAVIGATION ---- */
+.main-nav-list {
+	display: flex;
+	align-items: center;
+	gap: 3.2rem;
+	list-style: none;
 }
 
-.mg-r-sm {
-	margin-right: 1.6rem !important; /* utility classes are a good use case for !important */
+.main-nav-link:link,
+.main-nav-link:visited {
+	text-decoration: none;
+	color: #333;
+	font-weight: 500;
+	font-size: 1.8rem;
+	transition: all 0.3s;
 }
 
-/*  */
+.main-nav-link:hover,
+.main-nav-link:active {
+	color: #cf711f;
+}
 
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+	display: inline-block;
+	padding: 1.2rem 2.4rem;
+	background: #e67e22;
+	color: #fff;
+	border-radius: 9px;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+	background: #cf711f;
+}
+
+/* ---- HERO SECTION ---- */
 .section-hero {
 	background: #fdf2e9;
-	padding: 9.6rem 0;
+	padding: 4.8rem 0 9.6rem 0;
 }
 
 .hero {
@@ -69,58 +63,13 @@ body {
 
 	max-width: 130rem;
 	margin: 0 auto;
-}
-
-.heading-primary {
-	font-size: 5.2rem;
-	font-weight: 700;
-	line-height: 1.05;
-	color: #333;
-	letter-spacing: -0.5px;
-	margin-bottom: 3.2rem;
+	padding: 0 3.2rem;
 }
 
 .hero-description {
 	font-size: 2rem;
 	line-height: 1.6;
 	margin-bottom: 4.8rem;
-}
-
-.btn:link,
-.btn:visited {
-	display: inline-block;
-
-	padding: 1.6rem 3.2rem;
-	font-size: 2rem;
-	font-weight: 600;
-	text-decoration: none;
-
-	border-radius: 9px;
-	transition: background 0.3s;
-}
-
-.btn--full:link,
-.btn--full:visited {
-	background: #e67e22;
-	color: #fff;
-}
-.btn--full:hover,
-.btn--full:active {
-	background: #cf711f;
-}
-
-.btn--outline:link,
-.btn--outline:visited {
-	background: #fff;
-	color: #555;
-}
-
-.btn--outline:hover,
-.btn--outline:active {
-	background: #fdf2e9;
-
-	/* trick to add a inside border */
-	box-shadow: inset 0 0 0 3px #fff;
 }
 
 .hero-img {
@@ -158,4 +107,62 @@ body {
 .delivered-text span {
 	color: #cf711f;
 	font-weight: 700;
+}
+
+/* ---- HOW IT WORKS SECTION ---- */
+
+.section-how {
+	padding: 9.6rem 0;
+}
+
+.step-number {
+	margin-bottom: 1.2rem;
+	color: #ddd;
+	font-size: 8.6rem;
+	font-weight: 600;
+}
+
+.step-description {
+	font-size: 1.8rem;
+	line-height: 1.8;
+}
+
+.step-img-box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+	content: '';
+	display: block;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+	transform: translate(-50%, -50%);
+
+	border-radius: 50%;
+}
+
+.step-img-box::before {
+	width: 60%;
+	/* height: 60%; */
+	padding-bottom: 60%; /* hack since height does'nt work */
+	background: #fdf2e9;
+	z-index: -2;
+}
+
+.step-img-box::after {
+	width: 45%;
+	padding-bottom: 45%;
+	background: #fae5d3;
+	z-index: -1;
+}
+
+.step-img {
+	width: 35%;
 }

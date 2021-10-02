@@ -1,0 +1,169 @@
+/* 
+---- 01 TYPOGRAPHY SYSTEM
+
+- Font sizes (px):
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Font weights: 
+default: 400
+medium: 500
+semi-bold: 600
+bold: 700
+
+- Line heights: 
+default: 1
+small: 1.05
+medium: 1.2
+paragraph default: 1.6
+
+- Letter spacing
+-0.5px
+0.75px
+
+---- 02 COLORS
+
+Primary: #e67e22
+Tints:
+#fdf2e9
+#fae5d3
+Shades:
+#cf711f
+Accents:
+Greys:
+#555
+#333;
+
+---- 05 SHADOWS
+
+---- 06 BORDER-RADIUS
+default: 9px
+
+---- 07 WHITESPACE
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%; /* equivalent to 10px */
+}
+
+body {
+	font-family: 'Rubik', sans-serif;
+	line-height: 1;
+	font-weight: 400;
+	color: #555;
+}
+
+/* ---- UTILITY AND GENERAL COMPONENTS ---- */
+.container {
+	max-width: 120rem; /*1200px max width for a container is a standard value (it could also be 1140px) */
+	padding: 3.2rem;
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	gap: 9.6rem 6.4rem;
+}
+
+.grid--2cols {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3cols {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4cols {
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.grid--center-v {
+	align-items: center;
+	/* background: red; */
+}
+
+.mg-r-sm {
+	margin-right: 1.6rem !important; /* utility classes are a good use case for !important */
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+	font-weight: 700;
+	color: #333;
+	letter-spacing: -0.5px;
+}
+
+.heading-primary {
+	font-size: 5.2rem;
+	line-height: 1.05;
+	margin-bottom: 3.2rem;
+}
+
+.heading-secondary {
+	font-size: 4.4rem;
+	line-height: 1.2;
+	margin-bottom: 9.6rem;
+}
+
+.heading-tertiary {
+	font-size: 3.6rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
+}
+
+.subheading {
+	display: block;
+	margin-bottom: 1.6rem;
+	color: #cf711f;
+	font-size: 1.6rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 0.75px;
+}
+
+.btn:link,
+.btn:visited {
+	display: inline-block;
+
+	padding: 1.6rem 3.2rem;
+	font-size: 2rem;
+	font-weight: 600;
+	text-decoration: none;
+
+	border-radius: 9px;
+	transition: background 0.3s;
+}
+
+.btn--full:link,
+.btn--full:visited {
+	background: #e67e22;
+	color: #fff;
+}
+.btn--full:hover,
+.btn--full:active {
+	background: #cf711f;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+	background: #fff;
+	color: #555;
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+	background: #fdf2e9;
+
+	/* trick to add a inside border */
+	box-shadow: inset 0 0 0 3px #fff;
+}
