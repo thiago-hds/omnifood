@@ -109,6 +109,34 @@
 	font-weight: 700;
 }
 
+/* ---- FEATURED IN SECTION ---- */
+.section-featured {
+	padding: 4.8rem 0 3.2rem;
+}
+
+.heading-featured-in {
+	margin-bottom: 2.4rem;
+
+	color: #888;
+	font-size: 1.4rem;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 0.75px;
+}
+
+.logos {
+	display: flex;
+	justify-content: space-around;
+}
+
+.logos img {
+	height: 3.2rem;
+	/* combining filter: brightness(0) + opacity:0.5 we make the logos completely gray. We cant do that only with filter: grayscale() */
+	filter: brightness(0);
+	opacity: 0.5;
+}
+
 /* ---- HOW IT WORKS SECTION ---- */
 
 .section-how {
@@ -151,7 +179,7 @@
 .step-img-box::before {
 	width: 60%;
 	/* height: 60%; */
-	padding-bottom: 60%; /* hack since height does'nt work */
+	padding-bottom: 60%; /* hack since height doesn't work */
 	background: #fdf2e9;
 	z-index: -2;
 }
@@ -165,4 +193,113 @@
 
 .step-img {
 	width: 35%;
+}
+
+/* ---- MEALS SECTION ---- */
+.section-meals {
+	padding: 9.6rem 0;
+}
+
+.meal {
+	box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+	border-radius: 11px;
+	overflow: hidden;
+	transition: all 0.4s;
+}
+
+.meal:hover {
+	transform: translateY(-1.2rem);
+	box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+.meal-content {
+	padding: 3.2rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+	display: flex;
+	gap: 0.4rem;
+	margin-bottom: 1.2rem;
+}
+
+.tag {
+	display: inline-block;
+
+	padding: 0.4rem 0.8rem;
+
+	color: #333;
+	font-size: 1.2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+
+	border-radius: 100px;
+}
+
+.tag--vegetarian {
+	background: #51cf66;
+}
+
+.tag--vegan {
+	background: #82c91e;
+}
+
+.tag--paleo {
+	background: #ffd43b;
+}
+
+.meal-title {
+	color: #333;
+	font-size: 2.4rem;
+	font-weight: 600;
+	margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.meal-attribute {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+
+	font-size: 1.8rem;
+	list-style: none;
+}
+
+.meal-icon {
+	height: 2.4rem;
+	width: 2.4rem;
+	color: #e67e22;
+}
+
+.meal-img {
+	width: 100%;
+}
+
+.all-recipes {
+	text-align: center;
+	font-size: 1.8rem;
+}
+
+.diet-list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.diet-list-item {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	font-size: 1.8rem;
+	list-style: none;
+}
+
+.diet-list-icon {
+	width: 3rem;
+	height: 3rem;
+	color: #e67e22;
 }

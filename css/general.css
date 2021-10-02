@@ -37,6 +37,7 @@ Greys:
 
 ---- 06 BORDER-RADIUS
 default: 9px
+medium: 11px
 
 ---- 07 WHITESPACE
 
@@ -60,6 +61,10 @@ body {
 	line-height: 1;
 	font-weight: 400;
 	color: #555;
+}
+
+strong {
+	font-weight: 500;
 }
 
 /* ---- UTILITY AND GENERAL COMPONENTS ---- */
@@ -88,11 +93,18 @@ body {
 
 .grid--center-v {
 	align-items: center;
-	/* background: red; */
 }
 
 .mg-r-sm {
 	margin-right: 1.6rem !important; /* utility classes are a good use case for !important */
+}
+
+.mg-b-md {
+	margin-bottom: 4.8rem !important;
+}
+
+.center-text {
+	text-align: center;
 }
 
 .heading-primary,
@@ -141,7 +153,7 @@ body {
 	text-decoration: none;
 
 	border-radius: 9px;
-	transition: background 0.3s;
+	transition: all 0.3s;
 }
 
 .btn--full:link,
@@ -166,4 +178,20 @@ body {
 
 	/* trick to add a inside border */
 	box-shadow: inset 0 0 0 3px #fff;
+}
+
+.link:link,
+.link:visited {
+	display: inline-block;
+	color: #e67e22;
+	text-decoration: none;
+	border-bottom: 1px solid currentColor;
+	padding-bottom: 2px;
+	transition: all 0.3s;
+}
+
+.link:hover,
+.link:active {
+	color: #cf711f;
+	border-bottom: 1px solid transparent;
 }
