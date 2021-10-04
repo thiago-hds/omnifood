@@ -80,15 +80,19 @@ strong {
 	gap: 9.6rem 6.4rem;
 }
 
-.grid--2cols {
+.grid:not(:last-child) {
+	margin-bottom: 9.6rem;
+}
+
+.grid--2-cols {
 	grid-template-columns: repeat(2, 1fr);
 }
 
-.grid--3cols {
+.grid--3-cols {
 	grid-template-columns: repeat(3, 1fr);
 }
 
-.grid--4cols {
+.grid--4-cols {
 	grid-template-columns: repeat(4, 1fr);
 }
 
@@ -144,6 +148,7 @@ strong {
 	letter-spacing: 0.75px;
 }
 
+/* BUTTON COMPONENT */
 .btn:link,
 .btn:visited {
 	display: inline-block;
@@ -180,7 +185,7 @@ strong {
 	/* trick to add a inside border */
 	box-shadow: inset 0 0 0 3px #fff;
 }
-
+/* LINK COMPONENT */
 .link:link,
 .link:visited {
 	display: inline-block;
@@ -195,4 +200,25 @@ strong {
 .link:active {
 	color: #cf711f;
 	border-bottom: 1px solid transparent;
+}
+
+/* LIST COMPONENT */
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 1.6rem;
+}
+
+.list-item {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	font-size: 1.8rem;
+	list-style: none;
+}
+
+.list-icon {
+	width: 3rem;
+	height: 3rem;
+	color: #e67e22;
 }
