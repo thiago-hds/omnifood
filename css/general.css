@@ -32,9 +32,12 @@ Shades:
 #45260a
 Accents:
 Greys:
+
+#888
+#767676 (lighest gray allowed on #fff)
+#6f6f6f (lightest gray allowed on #fdf2e9)
 #555
 #333;
-#6f6f6f (lightest gray allowed on #fdf2e9)
 
 ---- 05 SHADOWS
 	0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
@@ -107,6 +110,9 @@ strong {
 
 .grid--4-cols {
 	grid-template-columns: repeat(4, 1fr);
+}
+.grid--5-cols {
+	grid-template-columns: repeat(5, 1fr);
 }
 
 .grid--center-v {
