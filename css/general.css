@@ -26,8 +26,10 @@ Primary: #e67e22
 Tints:
 #fdf2e9
 #fae5d3
+#eb984e
 Shades:
 #cf711f
+#45260a
 Accents:
 Greys:
 #555
@@ -35,6 +37,7 @@ Greys:
 #6f6f6f (lightest gray allowed on #fdf2e9)
 
 ---- 05 SHADOWS
+	0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
 
 ---- 06 BORDER-RADIUS
 default: 9px
@@ -68,10 +71,20 @@ strong {
 	font-weight: 500;
 }
 
+*:focus {
+	/* we could style the outline, but it doesn't follow the border radius */
+	/* outline: 4px dotted #e67e22; */
+	/* outline-offset: 8px; */
+
+	/* another way to do it is to use a box shadow */
+	outline: none;
+	box-shadow: 0 0 0 0.8rem rgb(230, 126, 34, 0.5);
+}
+
 /* ---- UTILITY AND GENERAL COMPONENTS ---- */
 .container {
 	max-width: 120rem; /*1200px max width for a container is a standard value (it could also be 1140px) */
-	padding: 3.2rem;
+	padding: 0 3.2rem;
 	margin: 0 auto;
 }
 
@@ -149,17 +162,34 @@ strong {
 }
 
 /* BUTTON COMPONENT */
+.btn,
 .btn:link,
 .btn:visited {
 	display: inline-block;
 
 	padding: 1.6rem 3.2rem;
+	border: none;
+
+	font-family: inherit;
 	font-size: 2rem;
 	font-weight: 600;
 	text-decoration: none;
 
 	border-radius: 9px;
 	transition: all 0.3s;
+	cursor: pointer;
+}
+
+.btn--form {
+	background: #45260a;
+	color: #fdf2e9;
+	align-self: end;
+	padding: 1.2rem;
+}
+
+.btn--form:hover {
+	background: #fff;
+	color: #555;
 }
 
 .btn--full:link,
