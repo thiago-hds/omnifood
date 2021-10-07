@@ -15,6 +15,7 @@ default: 1
 small: 1.05
 medium: 1.2
 paragraph default: 1.6
+Large: 1.8
 
 - Letter spacing
 -0.5px
@@ -64,10 +65,11 @@ html {
 }
 
 body {
+	color: #555;
 	font-family: 'Rubik', sans-serif;
 	line-height: 1;
 	font-weight: 400;
-	color: #555;
+	overflow-x: hidden;
 }
 
 strong {
@@ -251,6 +253,7 @@ strong {
 	gap: 1.6rem;
 	font-size: 1.8rem;
 	list-style: none;
+	line-height: 1.2;
 }
 
 .list-icon {
