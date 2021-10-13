@@ -62,6 +62,9 @@ medium: 11px
 
 html {
 	font-size: 62.5%; /* equivalent to 10px */
+
+	/* does't work on safari so we do it with javascript */
+	/* scroll-behavior: smooth; */
 }
 
 body {
