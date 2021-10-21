@@ -8,9 +8,9 @@ Esse projeto foi implementado como parte do curso ["Build Responsive Real-World 
 
 ## ✨ Features
 
-    - [x] Layout responsivo
-    - [x] Navegação com smooth scrolling
-    - [x] Navegação diferenciada para layout mobile
+- [x] Layout responsivo
+- [x] Navegação com smooth scrolling
+- [x] Navegação diferenciada para layout mobile
 
 ## 💻 Demonstração
 
